@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Anchor test document</title>
+  <!-- <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="style.css"> -->
+</head>
+<body>
+  <h1>This is a test document for anchor elements</h1>
+
+  <div class="main">
+    <h2>These exmaple use href=JavaScript:Void(0);"</h2>
+    <span>This anchor has an href: </span>
+    <a href="JavaScript:Void(0);" class="normal">Visit W3Schools.com!</a>
+    <br>
+    <span>This anchor has an href and a role of link: </span>
+    <a role="link" href="JavaScript:Void(0);" class="link">Visit W3Schools.com!</a>
+    <br>
+    <span>This anchor has a role of button that changes some CSS: </span>
+    <a role="button" href="JavaScript:Void(0);" class="color">Change</a>
+    <br>
+    <br>
+    <h2>These exmaple use href="JavaScript:;"</h2>
+    <span>This anchor has an href: </span>
+    <a href="JavaScript:;" class="normal">Visit W3Schools.com!</a>
+    <br>
+    <span>This anchor has an href and a role of link: </span>
+    <a role="link" href="JavaScript:;" class="link">Visit W3Schools.com!</a>
+    <br>
+    <span>This anchor has a role of button that changes some CSS: </span>
+    <a role="button" href="JavaScript:;" class="color">Change</a>
+    <br>
+    <br>
+
+    <h2>These exmaple use href="JavaScript:void()"</h2>
+    <span>This anchor has an href: </span>
+    <a href="JavaScript:void()" class="normal">Visit W3Schools.com!</a>
+    <br>
+    <span>This anchor has an href and a role of link: </span>
+    <a role="link" href="JavaScript:void()" class="link">Visit W3Schools.com!</a>
+    <br>
+    <span>This anchor has a role of button that changes some CSS: </span>
+    <a role="button" href="JavaScript:void()" class="color">Change</a>
+
+  </div>
+</body>
+
+
+<style>
+.main.on {
+  background-color:black;
+  color:white;
+}
+</style>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
+<script>
+$( document ).ready(function() {
+
+  $('a.normal').click(function(){
+    event.preventDefault();
+    console.log('clicked');
+    window.open("https://www.w3schools.com/");
+  });
+
+  $('a.link').click(function(){
+    event.preventDefault();
+    console.log('clicked');
+    window.open("https://www.w3schools.com/");
+  });
+
+  $('a.color').click(function(){
+    event.preventDefault();
+    console.log('clicked');
+    $('.main').toggleClass('on');
+  });
+
+
+});
+</script>
+</html>
