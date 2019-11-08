@@ -10,10 +10,10 @@
   <div class="main">
     <h2>These exmaple use href=JavaScript:Void(0);"</h2>
     <span>No role - </span>
-    <a href="JavaScript:Void(0);" class="normal">Visit W3Schools.com!</a>
+    <a href="JavaScript:Void(0);" class="normal">W3Schools</a>
     <br>
     <span>role="link" - </span>
-    <a role="link" href="JavaScript:Void(0);" class="link">Visit W3Schools.com!</a>
+    <a role="link" href="JavaScript:Void(0);" class="link">W3Schools</a>
     <br>
     <span>role="button" - </span>
     <a role="button" href="JavaScript:Void(0);" class="color">Change</a>
@@ -21,10 +21,10 @@
     <br>
     <h2>These exmaple use href="JavaScript:;"</h2>
     <span>No role - </span>
-    <a href="JavaScript:;" class="normal">Visit W3Schools.com!</a>
+    <a href="JavaScript:;" class="normal">W3Schools</a>
     <br>
     <span>role="link" - </span>
-    <a role="link" href="JavaScript:;" class="link">Visit W3Schools.com!</a>
+    <a role="link" href="JavaScript:;" class="link">W3Schools</a>
     <br>
     <span>role="button" - </span>
     <a role="button" href="JavaScript:;" class="color">Change</a>
@@ -33,10 +33,10 @@
 
     <h2>These exmaple use href="JavaScript:void()"</h2>
     <span>No role - </span>
-    <a href="JavaScript:void()" class="normal">Visit W3Schools.com!</a>
+    <a href="JavaScript:void()" class="normal">W3Schools</a>
     <br>
     <span>role="link" - </span>
-    <a role="link" href="JavaScript:void()" class="link">Visit W3Schools.com!</a>
+    <a role="link" href="JavaScript:void()" class="link">W3Schools</a>
     <br>
     <span>role="button" - </span>
     <a role="button" href="JavaScript:void()" class="color">Change</a>
@@ -64,22 +64,46 @@ h1 {
 <script>
 $( document ).ready(function() {
 
-  $('a.normal').click(function(){
-    event.preventDefault();
-    console.log('clicked');
-    window.open("https://www.w3schools.com/");
+  // $('a.normal').click(function(){
+  //   event.preventDefault();
+  //   console.log('clicked');
+  //   window.open("https://www.w3schools.com/");
+  // });
+  //
+  // $('a.link').click(function(){
+  //   event.preventDefault();
+  //   console.log('clicked');
+  //   window.open("https://www.w3schools.com/");
+  // });
+  //
+  // $('a.color').click(function(){
+  //   event.preventDefault();
+  //   console.log('clicked');
+  //   $('.main').toggleClass('on');
+  // });
+
+  $('a.normal').keydown(function(event){
+    if (event.which == 13 || event.which == 32) {
+      event.preventDefault();
+      console.log('clicked');
+      window.open("https://www.w3schools.com/");
+    }
   });
 
-  $('a.link').click(function(){
-    event.preventDefault();
-    console.log('clicked');
-    window.open("https://www.w3schools.com/");
+  $('a.link').keydown(function(event){
+    if (event.which == 13 || event.which == 32) {
+      event.preventDefault();
+      console.log('clicked');
+      window.open("https://www.w3schools.com/");
+    }
   });
 
-  $('a.color').click(function(){
-    event.preventDefault();
-    console.log('clicked');
-    $('.main').toggleClass('on');
+  $('a.color').keydown(function(event){
+    if (event.which == 13 || event.which == 32) {
+      event.preventDefault();
+      console.log('clicked');
+      $('.main').toggleClass('on');
+    }
   });
 
 
